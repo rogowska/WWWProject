@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Search for a pose</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.cdnfonts.com/css/hansen-shadow" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/jelly-anika" rel="stylesheet">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+
+  </head>
+  <body>
+    <main>
+        <h1>Search for a pose</h1>  
+
+        <form action="/posesfilter">
+          <label for="searchInput">Which pose are you looking for?</label>
+          <input type="text" name="searchTerm" id="searchInput">
+        
+          <select id="selectNumber" name="searchDifficulty">
+            <option>Choose difficulty</option>
+            </select>
+
+        <script>
+          var select = document.getElementById("selectNumber");
+          var options = ["Advanced", "Intermediate", "Begginer"];
+
+          for(var i = 0; i < options.length; i++) {
+              var opt = options[i];
+              var el = document.createElement("option");
+              el.textContent = opt;
+              el.value = opt;
+              select.appendChild(el);
+            }
+        </script>
+
+        </select>
+          <button onMouseOver="mouseOver()" onMouseOut="mouseOut()" id="searchBut">Search</button>
+          <a href="/addPose" id="addPose" onMouseOver="mouseOver2()" onMouseOut="mouseOut2()">Add a new pose</a>
+        </form> 
+
+
+    <ul>
+    <% poses.forEach(pose =>{ %>
+        <li>
+            <h2><%= pose.title %></h2>
+            <p><%= pose.difficulty_level %></p>
+            <img src="./images/<%= pose.image %>">
+            <p><%= pose.description.substring(0, 200) %>...</p>
+            <a href="/poses/<%= pose.id %>" id="viewMore">View More</a>
+        </li>
+    <% }) %>
+    </ul>
+
+    </main>
+  </body>
+</html>
+
+<script>
+  function mouseOver() {
+    document.getElementById("searchBut").style.color = "#CC0099";
+    document.getElementById("searchBut").style.background = "#F7DFF1";
+  }
+  
+  function mouseOut() {
+    document.getElementById("searchBut").style.color = '#C866B0';
+    document.getElementById("searchBut").style.background = "#FFF7FD";
+  }
+
+  function mouseOver2() {
+    document.getElementById("addPose").style.color = "#CC0099";
+    document.getElementById("addPose").style.background = "#F7DFF1";
+  }
+  
+  function mouseOut2() {
+    document.getElementById("addPose").style.color = '#FFF7FD';
+    document.getElementById("addPose").style.background = "#008080";
+  }
+  </script>

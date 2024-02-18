@@ -1,0 +1,147 @@
+body {
+    font-family: 'MADE Gentle', sans-serif;
+    margin: auto;
+    max-width: 1000px;
+    background: linear-gradient(-45deg, #FFEEFB, #F0D1FF, #C8F6FF, #FFDAEF);
+    background-size: 400% 1000%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    display: flex;
+    flex-direction:column;
+  }
+
+  @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    color: #008080;
+    padding: 30px;
+    text-align: center;
+    font-size: 90px;
+    font-family: 'Hansen Shadow', sans-serif;
+}
+
+h1 {
+  color: #008080;
+  padding: 30px;
+  text-align: center;
+  font-size: 45px;
+  font-family: 'Hansen Shadow', sans-serif;
+}
+
+h2 {
+  color: #008080;
+  padding: 20px;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Hansen Shadow', sans-serif;
+}
+
+a {
+    color: #C866B0;
+    display: block;
+    font-family: 'Jelly Anika', sans-serif;
+    padding: 20px;
+    text-align: center;
+    font-size: 35px;
+    text-decoration: none;
+    background-color: #FFF7FD;
+    background-size: 50% 6px;
+    border-radius: 25px;
+}
+
+p {
+    color: #90006D;
+    font-family: 'Jelly Anika', sans-serif;
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+img {
+    max-width:100%;
+    border-radius: 2%;
+    margin: auto;
+    display: flex;
+    border: 5px solid #FFF7FD;
+}
+
+button, #return, #viewMore {
+  font-family: 'Jelly Anika', sans-serif;
+  color: #C866B0;
+  background-color: #FFF7FD;
+  border: 5px solid #FFF7FD;
+  padding: 2%;
+  margin: 15px 200px;
+  border-radius: 5%;
+  font-size: 20px;
+}
+
+#addPose {
+  font-family: 'Jelly Anika', sans-serif;
+  color: #FFF7FD;
+  background-color: #008080;
+  border: 5px solid #FFF7FD;
+  padding: 15px 32px;
+  margin: 10px 200px;
+  border-radius: 5%;
+  font-size: 20px;
+}
+
+input[type=text], input[type=file], select, textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input::file-selector-button {
+  color: #008080;
+  font-size: 20px;
+  font-family: 'Jelly Anika', sans-serif;
+  padding: 0.5;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  font-family: 'Jelly Anika', sans-serif;
+  color: #C866B0;
+  font-size: 20px;
+}
+ 
+option, select:not(:checked) {
+  color: #C866B0;
+  font-size: 20px;
+  font-family: 'Jelly Anika', sans-serif;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 600px) {
+  .section1 {
+         flex-direction: column;
+     }
+ }
